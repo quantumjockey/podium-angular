@@ -24,6 +24,9 @@ angular
     'meetings',
     'topics'
   ])
-  .config(function ($routeProvider) {
-
-  });
+  .config([ '$routeProvider', function ($routeProvider) {
+    $routeProvider
+      .otherwise({
+        redirectTo: '/Topics'
+      });
+  }]);
