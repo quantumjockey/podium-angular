@@ -1,0 +1,25 @@
+div.header {
+	background: black;
+	display: static;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	width: 100%;
+}
+
+div.logo-container {
+	margin-left: 6%;
+	padding: 5px;
+}
+
+div.logo-container img {
+	margin: 10px;
+}
+
+div.logo-container label {
+	color: #ffffff;
+	font-family: Courier;
+	font-size: 40px;
+	font-weight: lighter;
+	vertical-align: middle;
+}

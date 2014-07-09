@@ -6,6 +6,6 @@ angular
 		return {
 			restrict: 'E',
 			templateUrl: 'directives/lvrHeader/view.html',
-			transclude: false
+			transclude: true
 		};
 	});
