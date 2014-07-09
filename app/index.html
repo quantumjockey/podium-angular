@@ -26,21 +26,21 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">podiumAngular</h3>
+    <lvr-header>
+      <div class="logo-container">
+        <img src="images/lvrug_logo.png"/>
+        <label>@LVRUG</label>
       </div>
-
+    </lvr-header>
+    <div class="container"> 
       <div ng-view=""></div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
+      <lvr-footer>
+        <label>A project by the Las Vegas Ruby User Group | </label>
+        <label><a href="mailto:topics_app@lvrug.org">Give Us Feedback</a> | </label>
+        <label><a href="#/Leaderboard">Leaderboard</a> | </label>
+        <label><a href="https://twitter.com/LVRUG">Send Us Tweets</a> | </label>
+        <label><a href="https://github.com/LasVegasRubyGroup">See Our Code</a></label>
+      </lvr-footer>
     </div>
 
 
