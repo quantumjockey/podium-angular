@@ -1,5 +1,9 @@
 'use strict';
 
+angular.module('leaderboard', []);
+angular.module('meetings', []);
+angular.module('topics', []);
+
 /**
  * @ngdoc overview
  * @name podiumAngularApp
@@ -15,7 +19,10 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'leaderboard',
+    'meetings',
+    'topics'
   ])
   .config(function ($routeProvider) {
 
