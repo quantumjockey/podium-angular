@@ -14,6 +14,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="directives/lvrFooter/styles.css" />
     <link rel="stylesheet" href="directives/lvrHeader/styles.css" />
+    <link rel="stylesheet" href="directives/lvrSuppLinks/styles.css" />
     <link rel="stylesheet" href="directives/lvrTopic/styles.css" />
     <link rel="stylesheet" href="styles/content-styles.css" />
     <link rel="stylesheet" href="styles/document-styles.css" />
@@ -35,11 +36,11 @@
     <div class="container"> 
       <div ng-view=""></div>
       <lvr-footer>
-        <label>A project by the Las Vegas Ruby User Group | </label>
-        <label><a href="mailto:topics_app@lvrug.org">Give Us Feedback</a> | </label>
+        <lvr-supp-links title="A project by the Las Vegas Ruby User Group"></lvr-supp-links>
+<!--         <label><a href="mailto:topics_app@lvrug.org">Give Us Feedback</a> | </label>
         <label><a href="#/Leaderboard">Leaderboard</a> | </label>
         <label><a href="https://twitter.com/LVRUG">Send Us Tweets</a> | </label>
-        <label><a href="https://github.com/LasVegasRubyGroup">See Our Code</a></label>
+        <label><a href="https://github.com/LasVegasRubyGroup">See Our Code</a></label> -->
       </lvr-footer>
     </div>
 
@@ -79,6 +80,7 @@
         <script src="app.js"></script>
         <script src="directives/lvrFooter/scripts.js"></script>
         <script src="directives/lvrHeader/scripts.js"></script>
+        <script src="directives/lvrSuppLinks/scripts.js"></script>
         <script src="directives/lvrTopic/scripts.js"></script>
         <script src="modules/leaderboard/config.js"></script>
         <script src="modules/leaderboard/controller.js"></script>
