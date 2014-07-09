@@ -34,7 +34,11 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+        files:  [
+          '<%= yeoman.app %>/{,*/}*.js',
+          '<%= yeoman.app %>/directives/{,*/}*.js',
+          '<%= yeoman.app %>/modules/{,*/}*.js'
+        ],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -56,8 +60,12 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/{,*/}*.html',
-          '.tmp/styles/{,*/}*.css',
+          '<%= yeoman.app %>/index.html',
+          '<%= yeoman.app %>/directives/{,*/}*.html',
+          '<%= yeoman.app %>/directives/{,*/}*.css',
+          '<%= yeoman.app %>/modules/{,*/}*.html',
+          '<%= yeoman.app %>/modules/{,*/}*.css',
+          '<%= yeoman.app %>/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -154,8 +162,12 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '.tmp/styles/',
-          src: '{,*/}*.css',
-          dest: '.tmp/styles/'
+          src: [
+            'directives/{,*/}*.css',
+            'modules/{,*/}*.css',
+            'styles/{,*/}*.css'
+          ],
+          dest: '.tmp/'
         }]
       }
     },
@@ -177,7 +189,7 @@ module.exports = function (grunt) {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          // '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -310,9 +322,11 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
-            'views/{,*/}*.html',
-            'images/{,*/}*.{webp}',
-            'fonts/*'
+            'model/*.json',
+            'fonts/*',
+            'directives/{,*/}*.html',
+            'modules/{,*/}*.html',
+            'images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
           ]
         }, {
           expand: true,
@@ -344,8 +358,8 @@ module.exports = function (grunt) {
       ],
       dist: [
         'copy:styles',
-        'imagemin',
-        'svgmin'
+        'imagemin'
+        // 'svgmin'
       ]
     },
 
