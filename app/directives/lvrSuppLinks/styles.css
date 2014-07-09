@@ -1,0 +1,12 @@
+ul.supp-links {
+	list-style:none;
+}
+
+ul.supp-links a {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+ul.supp-links li {
+	display: inline-block;
+}

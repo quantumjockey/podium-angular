@@ -1,0 +1,18 @@
+[
+{
+	"address" : "mailto:topics_app@lvrug.org",
+	"label" : "Give Us Feedback"
+},
+{
+	"address" : "#/Leaderboard",
+	"label" : "Leaderboard"
+},
+{
+	"address" : "https://twitter.com/LVRUG",
+	"label" : "Send Us Tweets"
+},
+{
+	"address" : "https://github.com/LasVegasRubyGroup",
+	"label" : "See Our Code"
+}
+]
