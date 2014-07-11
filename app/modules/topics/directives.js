@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-	.module('podiumAngularApp')
+	.module('topics')
 	.directive('lvrTopic', function() {
 		return {
 			restrict: 'E',
