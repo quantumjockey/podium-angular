@@ -17,6 +17,3 @@ angular
 			transclude: false
 		};
 	}])
-	.factory('SuppLinksService', [ '$http', function ($http) {
-    return $http.get('model/supp-links.json');
-  }]);
