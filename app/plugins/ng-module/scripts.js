@@ -2,6 +2,9 @@
 
 angular
 	.module('ngModule')
+	.config(function () {
+
+	})
 	.directive('module', function() {
 		return {
 			restrict: 'E',
