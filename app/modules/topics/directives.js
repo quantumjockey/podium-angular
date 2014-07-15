@@ -5,7 +5,7 @@ angular
 	.directive('lvrTopic', function() {
 		return {
 			restrict: 'E',
-			templateUrl: 'directives/lvrTopic/view.html',
+			templateUrl: 'modules/topics/lvrTopic/view.html',
 			transclude: false
 		};
 	});

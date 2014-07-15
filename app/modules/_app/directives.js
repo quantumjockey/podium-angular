@@ -5,14 +5,14 @@ angular
 	.directive('lvrFooter', function() {
 		return {
 			restrict: 'E',
-			templateUrl: 'directives/lvrFooter/view.html',
+			templateUrl: 'modules/_app/lvrFooter/view.html',
 			transclude: true
 		};
 	})
 	.directive('lvrHeader', function() {
 		return {
 			restrict: 'E',
-			templateUrl: 'directives/lvrHeader/view.html',
+			templateUrl: 'modules/_app/lvrHeader/view.html',
 			transclude: true
 		};
 	})
@@ -27,7 +27,7 @@ angular
 			scope: {
 				title: '@'
 			},
-			templateUrl: 'directives/lvrSuppLinks/view.html',
+			templateUrl: 'modules/_app/lvrSuppLinks/view.html',
 			transclude: false
 		};
 	}]);
