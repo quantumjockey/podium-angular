@@ -36,7 +36,6 @@ module.exports = function (grunt) {
       js: {
         files:  [
           '<%= yeoman.app %>/{,*/}*.js',
-          '<%= yeoman.app %>/directives/{,*/}*.js',
           '<%= yeoman.app %>/modules/{,*/}*.js'
         ],
         tasks: ['newer:jshint:all'],
@@ -50,7 +49,6 @@ module.exports = function (grunt) {
       },
       styles: {
         files: [
-          '<%= yeoman.app %>/directives/{,*/}*.css',
           '<%= yeoman.app %>/modules/{,*/}*.css',
           '<%= yeoman.app %>/styles/{,*/}*.css'
         ],
@@ -65,8 +63,6 @@ module.exports = function (grunt) {
         },
         files: [
           '<%= yeoman.app %>/index.html',
-          '<%= yeoman.app %>/directives/{,*/}*.html',
-          '<%= yeoman.app %>/directives/{,*/}*.css',
           '<%= yeoman.app %>/modules/{,*/}*.html',
           '<%= yeoman.app %>/modules/{,*/}*.css',
           '<%= yeoman.app %>/styles/{,*/}*.css',
@@ -165,11 +161,10 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/styles/',
+          cwd: '.tmp/',
           src: [
-            'directives/{,*/}*.css',
-            'modules/{,*/}*.css',
-            'styles/{,*/}*.css'
+            'modules/styles/{,*/}*.css',
+            'styles/styles/{,*/}*.css'
           ],
           dest: '.tmp/'
         }]
@@ -287,7 +282,10 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: ['*.html', 'views/{,*/}*.html'],
+          src: [
+            '*.html', 
+            'modules/{,*/}*.html'
+            ],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -328,7 +326,6 @@ module.exports = function (grunt) {
             '*.html',
             'model/*.json',
             'fonts/*',
-            'directives/{,*/}*.html',
             'modules/{,*/}*.html',
             'images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
           ]
@@ -350,7 +347,6 @@ module.exports = function (grunt) {
         dest: '.tmp/styles/',
         src: [
           '{,*/}*.css',
-          'directives/{,*/}*.css',
           'modules/{,*/}*.css'
           ]
       }
