@@ -1,3 +1,11 @@
+div.footer hr {
+	border-top: 1px solid #b81d30;
+}
+
+div.footer label {
+	font-weight: normal;
+}
+
 div.header {
 	background: black;
 	display: static;
@@ -22,4 +30,17 @@ div.logo-container label {
 	font-size: 40px;
 	font-weight: lighter;
 	vertical-align: middle;
+}
+
+ul.supp-links {
+	list-style:none;
+}
+
+ul.supp-links a {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+ul.supp-links li {
+	display: inline-block;
 }
