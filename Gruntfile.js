@@ -35,7 +35,6 @@ module.exports = function (grunt) {
       },
       js: {
         files:  [
-          '<%= yeoman.app %>/{,*/}*.js',
           '<%= yeoman.app %>/modules/{,*/}*.js'
         ],
         tasks: ['newer:jshint:all'],
@@ -48,10 +47,7 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: [
-          '<%= yeoman.app %>/modules/{,*/}*.css',
-          '<%= yeoman.app %>/styles/{,*/}*.css'
-        ],
+        files: ['<%= yeoman.app %>/modules/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
       gruntfile: {
@@ -64,8 +60,6 @@ module.exports = function (grunt) {
         files: [
           '<%= yeoman.app %>/index.html',
           '<%= yeoman.app %>/modules/{,*/}*.html',
-          '<%= yeoman.app %>/modules/{,*/}*.css',
-          '<%= yeoman.app %>/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -161,10 +155,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/',
+          cwd: '.tmp/styles/',
           src: [
-            'modules/styles/{,*/}*.css',
-            'styles/styles/{,*/}*.css'
+            'modules/{,*/}*.css'
           ],
           dest: '.tmp/'
         }]
@@ -230,7 +223,7 @@ module.exports = function (grunt) {
     //   dist: {
     //     files: {
     //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
+    //         '.tmp/modules/{,*/}*.css',
     //       ]
     //     }
     //   }
@@ -282,10 +275,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: [
-            '*.html', 
-            'modules/{,*/}*.html'
-            ],
+          src: ['*.html', 'modules/**/*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -346,7 +336,6 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/',
         dest: '.tmp/styles/',
         src: [
-          '{,*/}*.css',
           'modules/{,*/}*.css'
           ]
       }
