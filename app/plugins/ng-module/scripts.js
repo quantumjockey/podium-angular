@@ -7,21 +7,13 @@ angular
 	})
 	.directive('loadModule', [ '$document', function($document) {
 
-		var stylesheetTemplate = 	{
-				head: '<link rel="stylesheet" href="',
-				tail: '" />'
-			};
-
-		var scriptsTemplate = {
-				head: '<script src="modules/',
-				tail: '.js"></script>'
-			};
+		var basePath = 'modules';
 
 		var components = [
-			'/config',
-			'/controller',
-			'/directives',
-			'/services'
+			'config',
+			'controller',
+			'directives',
+			'services'
 			];
 
 		function CheckIfDocExists(address) {
@@ -38,7 +30,27 @@ angular
 		return {
 			link: function(scope, element, attrs){
 
+				var styleSheetUrl = basePath + '/' + scope.name + '/styles.css';
+				var scriptUrls = [];
 
+				components.forEach(function(component){
+					scriptUrls.push(basePath + '/' + scope.name + '/' + component + '.js');
+				});
+
+				if (checkIfDocExists(styleSheetUrl)){
+					var markup = $document.createElement('link');
+					markup.href = styleSheetUrl;
+					markup.rel = 'stylesheet';
+					$document.getElementsByTagName('head')[0].appendChild(markup);
+				}
+
+				scriptUrls.forEach(function(url){
+					if (checkIfDocExists(styleSheetUrl)){
+						var markup = $document.createElement('script');
+						markup.src = url;
+						$document.body.appendChild(markup);
+					}
+				});
 
 			},
 			restrict: 'E',
