@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-	.module('ngModule')
+	.module('ezModule')
 	.config(function () {
 
 	})
