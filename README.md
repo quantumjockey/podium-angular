@@ -11,14 +11,14 @@ This repository was intended to serve as a collaborative effort among the Las Ve
 Notes
 -----
 
-This repository was scaffolded with [Yeoman](http://yeoman.io/) (on OSX) and architected according to the original developer's interpretation of [Google's Style guide for AngularJS](http://google-styleguide.googlecode.com/svn/trunk/angularjs-google-style.html). It stresses a module-centric pattern rather than the app/components pattern recently generalized by the Angular team. This approach was chosen to reduce the risk of coupling among application components and is intended to make markup, styles, and scripts associated with each module easier to locate within the application.
+This repository was scaffolded with [Yeoman](http://yeoman.io/) (on OSX) and architected according to a slightly customized interpretation of [Google's Style guide for AngularJS](http://google-styleguide.googlecode.com/svn/trunk/angularjs-google-style.html). It stresses a module-centric pattern rather than the app/components pattern recently generalized by the Angular team. This approach was chosen to reduce the risk of coupling among application components and is intended to make markup, styles, and scripts associated with each module easier to locate within the application.
 
 Instructions
 ------------
 
 To get your machine ready for development with this repository:
 
-1. Clone it to your machine.
+1. Clone the repository to your machine.
 2. Navigate to the directory you cloned your repository to via Terminal.
 3. Install [GruntJS](http://gruntjs.com/) to your machine by following instructions provided on the [Getting Started Page](http://gruntjs.com/getting-started).
 4. Install a local grunt (without -g option) to the repository so that existing Gruntfile.js configurations can be properly applied during the serve operation.
