@@ -27,8 +27,10 @@ To get your machine ready for development with this repository:
 
 Then, run:
 
-`$ grunt serve`
+		$ grunt serve
 
 And you're ready to go!
 
 Livereload and hosting are already configured out-of-the-box.
+
+Some modification may be necessary if the developer chooses to work with a cloned repository in a live-reload-enabled editing environment like [Brackets](http://brackets.io/?lang=en). However, the extent of these changes is unknown as development with this repository has not been completely tested with Brackets - use caution as unexpected results (and headaches) may occur.
